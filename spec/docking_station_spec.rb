@@ -16,4 +16,11 @@ require 'DockingStation_class'
       docking_station = DockingStation.new
       it { expect(docking_station).to respond_to(:dock) }
     end
+
+    describe "store bike when docked in docking station" do
+      docking_station = DockingStation.new
+      bike = docking_station.release_bike
+      docking_station.dock(bike)
+      it { expect(docking_station.docked_bike).to eq bike }
+    end
   end
