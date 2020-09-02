@@ -11,4 +11,9 @@ require 'DockingStation_class'
       bike = docking_station.release_bike
       it { expect(bike.working?).to eq true }
     end
+
+    describe "dock bike to docking station" do
+      docking_station = DockingStation.new
+      it { expect(docking_station).to respond_to(:dock) }
+    end
   end
