@@ -5,4 +5,10 @@ require 'DockingStation_class'
       docking_station = DockingStation.new
       it { expect(docking_station).to respond_to(:release_bike) }
     end
+
+    describe "release bike and check it's working" do
+      docking_station = DockingStation.new
+      bike = docking_station.release_bike
+      it { expect(bike.working?).to eq true }
+    end
   end
