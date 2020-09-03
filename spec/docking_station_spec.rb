@@ -31,4 +31,11 @@ require 'DockingStation_class'
       it { expect {raise (docking_station.release_bike)}.to raise_error }
     end
 
+    describe "docking station not accepting more than capacity" do
+      docking_station = DockingStation.new
+      bike = docking_station.release_bike
+      docking_station.dock(bike)
+      it {expect{raise (docking_station.dock(bike))}.to raise_error}
+    end
+
   end
