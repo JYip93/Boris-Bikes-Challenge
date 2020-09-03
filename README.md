@@ -1,1 +1,1 @@
-They want you to build a program that will emulate all the docking stations, bikes, and infrastructure (repair staff, and so on) required to make their dream a reality.
+A program to simulate the the releasing and docking of bikes at a Boris bikes docking station.
