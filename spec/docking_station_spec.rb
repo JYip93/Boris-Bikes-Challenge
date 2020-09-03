@@ -1,6 +1,7 @@
 require 'DockingStation_class'
 
   describe DockingStation do
+
     describe "release bike from docking station" do
       docking_station = DockingStation.new
       it { expect(docking_station).to respond_to(:release_bike) }
@@ -17,10 +18,11 @@ require 'DockingStation_class'
       it { expect(docking_station).to respond_to(:dock) }
     end
 
-    describe "store bike when docked in docking station" do
+=begin    describe "dock bike in docking station" do
       docking_station = DockingStation.new
       bike = docking_station.release_bike
       docking_station.dock(bike)
       it { expect(docking_station.docked_bike).to eq bike }
     end
+    =end 
   end
