@@ -10,7 +10,6 @@ class DockingStation
 
   def release_bike
     if @capacity > 0
-    @bike = Bike.new
     @bikes_docked.pop
     @bike
     else
@@ -23,7 +22,7 @@ def dock(bike)
     @docked_bike = bike
     @bikes_docked << bike
   else
-    raise "It's full"
+    raise StandardError.new "It's full"
   end
   end
 
